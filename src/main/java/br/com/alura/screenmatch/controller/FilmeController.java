@@ -37,6 +37,7 @@ public class FilmeController {
     public String alteraFilme(DadosAlteracaoFilme dados) {
         var filme = repository.getReferenceById(dados.id());
         filme.atualizaDados(dados);
+        System.out.println("Filme atualizado!");
         return "redirect:/filmes";
     }
 
@@ -44,6 +45,8 @@ public class FilmeController {
     public String cadastraFilme(DadosCadastroFilme dados){
         var filme = new Filme(dados);
         repository.save(filme);
+        System.out.println("Filme cadastrado!");
+        System.out.println(filme.exibeFichaTecnica());
         return "redirect:/filmes";
     }
 

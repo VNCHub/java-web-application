@@ -59,4 +59,14 @@ public class Filme {
         this.anoLancamento = dados.ano();
         this.genero = dados.genero();
     }
+
+    public String exibeFichaTecnica(){
+        return  "-----------------------------FICHA TÉCNICA-----------------------------" +
+                "ID: " + this.getId() +
+                "\nNome: " + this.getNome() +
+                "\nDuracao em minutos: " + this.getDuracaoEmMinutos() +
+                "\nAno de Lançamento: " + this.getAnoLancamento() +
+                "\nGenero: " + this.getGenero() +
+                "-----------------------------------------------------------------------";
+    }
 }
