@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "filmes")
-public class Filme {
+public class Titulo {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -14,14 +14,14 @@ public class Filme {
     private Integer anoLancamento;
     private String genero;
 
-    public Filme (DadosCadastroFilme dados){
+    public Titulo(DadosCadastroFilme dados){
         this.nome = dados.nome();
         this.duracaoEmMinutos = dados.duracao();
         this.anoLancamento = dados.ano();
         this.genero = dados.genero();
     }
 
-    public Filme (){}
+    public Titulo(){}
 
     public Long getId() {
         return id;
