@@ -1,0 +1,12 @@
+.content {
+    padding: 20px 15%;
+    data-bs-theme="dark";
+}
+
+.botoes-formulario {
+    display: flex;
+}
+
+.btn-primary {
+    margin: 0 5px;
+}
